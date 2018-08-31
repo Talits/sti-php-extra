@@ -6,7 +6,7 @@ ENV NPM_CONFIG_PREFIX=$HOME/.npm-global \
     PATH=$HOME/node_modules/.bin/:$HOME/.npm-global/bin/:$PATH:/usr/local/bin/ffmpeg/
 
 RUN yum install -y centos-release-scl-rh && \
-    INSTALL_PKGS="glibc-common more-php56-php-pecl-redis more-php56-php-mcrypt newrelic-php5 rh-nodejs4 rh-nodejs4-npm rh-nodejs4-nodejs-nodemon nss_wrapper sclo-php56-php-pecl-imagick" && \
+    INSTALL_PKGS="curl glibc-common more-php56-php-pecl-redis more-php56-php-mcrypt newrelic-php5 rh-nodejs4 rh-nodejs4-npm rh-nodejs4-nodejs-nodemon nss_wrapper sclo-php56-php-pecl-imagick" && \
     ln -s /usr/lib/node_modules/nodemon/bin/nodemon.js /usr/bin/nodemon && \
     yum install -y https://www.softwarecollections.org/en/scls/remi/php56more/epel-7-x86_64/download/remi-php56more-epel-7-x86_64.noarch.rpm && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
